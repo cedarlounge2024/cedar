@@ -1,0 +1,44 @@
+# Sunmi POS Research for Shisha Bar App
+
+## Sunmi POS Models
+Based on initial research, Sunmi offers various POS models that could be suitable for a shisha bar:
+
+1. Sunmi V2s - Handheld device with Android 11, quad-core 2.0GHz CPU, 2GB RAM
+   - Built-in printer
+   - Suitable for mobile ordering
+   - Good for waiters taking orders at tables
+
+2. Sunmi V2 Pro - Similar to V2s with 58mm thermal printer
+   - Print speed: 70mm/s
+   - Android 7.1
+   - Quad-core 1.4GHz processor
+
+3. Sunmi T2 Mini - Countertop POS with 80mm printer
+   - Android 7.1
+   - Octa-core 1.4GHz processor
+   - 2GB RAM + 16GB ROM
+
+4. Sunmi D3 Pro - Larger display (15.6")
+   - Android 13
+   - Qualcomm hexa-core processor
+   - 4GB RAM + 64GB ROM
+   - Better for main counter/cashier station
+
+## Restaurant Ordering System Integration
+- Sunmi devices run on Android, making custom app development feasible
+- Can integrate with restaurant management systems
+- Support for order taking, checkout, and loyalty management
+- Can be used for both mobile ordering (waiters) and fixed POS stations
+
+## Development Considerations
+- Need to develop Android app compatible with Sunmi OS (based on Android)
+- Can use standard Android development tools (Android Studio, Java/Kotlin)
+- Need to consider integration with printer for receipts
+- Should design for both waiter mobile ordering and cashier station
+- Need to implement separate receipt types for bar orders vs. shisha orders
+
+## Next Steps
+- Need more specific information about the Sunmi model being used
+- Need to understand the workflow requirements in more detail
+- Consider whether to use existing restaurant POS software or develop custom solution
+- Research payment processing integration options

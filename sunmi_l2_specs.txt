@@ -1,0 +1,30 @@
+# Sunmi L2 POS Device Specifications
+
+## Hardware Specifications
+- Operating System: Android 7.1
+- Processor: Qualcomm quad-core 1.4GHz
+- RAM: 2GB
+- ROM: 16GB
+- Display: 5.0" HD IPS display (1280 x 720)
+- Battery: 5000mAh
+- Durability: IP67 rugged design
+
+## Connectivity
+- 4G support
+- WiFi
+- Bluetooth
+- NFC capability
+- Dual SIM card slots
+
+## Additional Features
+- Optional 1D/2D barcode scanner (Zebra scan head)
+- 5MP camera with autofocus
+- GPS
+
+## Considerations for App Development
+- App must be compatible with Android 7.1
+- UI should be optimized for 5" display
+- Can leverage NFC capabilities for potential payment solutions
+- Can utilize camera for scanning if dedicated scanner not present
+- Should consider memory limitations (2GB RAM, 16GB storage)
+- Battery life considerations for all-day usage

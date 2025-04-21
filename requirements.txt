@@ -1,0 +1,26 @@
+# Shisha Bar App Requirements
+
+## Confirmed Requirements
+1. App for Shisha Bar business
+2. Waiter system for taking orders
+3. Ordering system
+4. Customer call system (customers can call waiters)
+5. Cash register integration with Sunmi L2 POS device
+6. Separate receipts for bar orders and shisha orders
+7. Digital ordering system
+8. No existing cash register system
+9. Design should be elegant and simple for employees to use
+10. 20 regular tables (numbered 1-20)
+11. 2 game tables
+12. Payment methods: Cash, Credit Card, EC Card
+13. Inventory management options that owner can modify themselves
+
+## Technical Requirements
+1. Android app compatible with Sunmi L2 POS system (Android 7.1, Qualcomm quad-core 1.4GHz, 2GB RAM, 16GB ROM)
+2. Integration with receipt printer
+3. Table management system for 22 tables
+4. Separate handling for bar and shisha orders
+5. User-friendly interface for staff
+6. Customer call system interface
+7. Payment processing for multiple payment methods
+8. Configurable inventory management system

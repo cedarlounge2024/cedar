@@ -1,0 +1,114 @@
+# Shisha Bar App Architecture
+
+## System Overview
+The Shisha Bar Management System is a custom Android application designed for the Sunmi L2 POS device. The system will facilitate order management, table tracking, customer service, payment processing, and inventory management for a shisha bar with 20 regular tables and 2 game tables.
+
+## Architecture Components
+
+### 1. Core Modules
+
+#### 1.1 User Interface Layer
+- **Login Module**: Authentication for staff members
+- **Dashboard Module**: Main navigation hub with quick access to all functions
+- **Table Management Module**: Visual representation of all 22 tables with status indicators
+- **Order Management Module**: Interface for creating and managing orders
+- **Payment Module**: Processing payments via cash, credit card, or EC card
+- **Customer Call Module**: System for customers to call waiters
+- **Inventory Management Module**: Stock tracking and management interface
+- **Settings Module**: Configuration options for the system
+
+#### 1.2 Business Logic Layer
+- **Authentication Service**: Handles user authentication and permissions
+- **Order Service**: Processes order creation, modification, and fulfillment
+- **Table Service**: Manages table status and assignments
+- **Payment Service**: Handles payment processing and transaction records
+- **Notification Service**: Manages customer call notifications
+- **Inventory Service**: Tracks product inventory and updates
+- **Reporting Service**: Generates sales and inventory reports
+
+#### 1.3 Data Layer
+- **Local Database**: SQLite database for storing all system data
+- **Data Access Objects**: Interfaces for database operations
+- **Repository Classes**: Mediators between business logic and data access
+- **Preference Manager**: Handles application settings and preferences
+
+### 2. Hardware Integration
+
+#### 2.1 Printer Integration
+- **Receipt Generator**: Creates formatted receipts for orders
+- **Printer Service**: Communicates with the Sunmi L2 built-in printer
+- **Template Manager**: Manages different receipt templates for bar vs. shisha orders
+
+#### 2.2 Payment Hardware Integration
+- **Card Reader Interface**: Integration with payment card readers
+- **Cash Drawer Controller**: Management of cash transactions
+
+#### 2.3 Device Features Utilization
+- **Screen Manager**: Optimizes UI for the 5" display
+- **Touch Input Handler**: Manages touch interactions
+- **Battery Monitor**: Tracks device battery status
+
+### 3. External Integrations (Optional/Future)
+- **Backup Service**: Cloud backup for system data
+- **Remote Management**: Web interface for remote system management
+- **Customer Loyalty**: Customer tracking and loyalty program
+
+## Data Model
+
+### Tables
+- **Users**: Staff member accounts and permissions
+- **Tables**: Information about physical tables in the establishment
+- **Orders**: Customer orders with timestamps
+- **OrderItems**: Individual items within orders
+- **Products**: Available products (drinks, shisha flavors, etc.)
+- **Categories**: Product categories
+- **Inventory**: Stock levels for products
+- **Payments**: Payment transaction records
+- **CustomerCalls**: Records of customer service calls
+
+## Communication Flow
+
+1. **Order Processing Flow**:
+   - Waiter selects table → Creates order → Adds items → Confirms order
+   - System generates separate receipts for bar and shisha items
+   - Kitchen/bar staff fulfill orders
+   - Waiter delivers items to customer
+
+2. **Customer Call Flow**:
+   - Customer initiates call
+   - System notifies available waiters
+   - Waiter acknowledges and responds to call
+
+3. **Payment Processing Flow**:
+   - Waiter selects table → Views order → Initiates payment
+   - System calculates total → Processes payment method
+   - System generates receipt → Updates order status
+
+4. **Inventory Management Flow**:
+   - System tracks inventory levels
+   - Owner can modify inventory data
+   - System alerts when stock is low
+
+## Technical Specifications
+
+- **Development Platform**: Android Studio
+- **Programming Language**: Kotlin/Java
+- **Minimum Android Version**: Android 7.1 (compatible with Sunmi L2)
+- **Database**: SQLite with Room Persistence Library
+- **UI Framework**: Android Jetpack components
+- **Architecture Pattern**: MVVM (Model-View-ViewModel)
+- **Hardware Integration**: Sunmi SDK for printer and device features
+
+## Performance Considerations
+
+- **Memory Optimization**: Efficient resource usage for 2GB RAM constraint
+- **Storage Management**: Compact data storage for 16GB ROM
+- **Battery Efficiency**: Optimized operations for extended battery life
+- **Responsive UI**: Fast loading screens and smooth transitions
+
+## Security Considerations
+
+- **User Authentication**: Secure login for staff members
+- **Transaction Security**: Secure payment processing
+- **Data Protection**: Encrypted storage of sensitive information
+- **Access Control**: Role-based permissions for system features
